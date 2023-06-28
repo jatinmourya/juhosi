@@ -1,0 +1,16 @@
+<div class="mx-3 pt-3">
+  <div class="nav-links d-flex mb-4 border align-items-center">
+    <p routerLink="/login" *ngIf="!service.isLoggedIn">Login</p>
+    <p routerLink="/add-order" *ngIf="service.isLoggedIn && !service.isAdmin">
+      Add Orders
+    </p>
+    <p
+      routerLink="/order-details"
+      *ngIf="service.isLoggedIn && service.isAdmin"
+    >
+      Order Details
+    </p>
+    <p *ngIf="service.isLoggedIn" (click)="logoutUser()">Log Out</p>
+  </div>
+  <router-outlet></router-outlet>
+</div>

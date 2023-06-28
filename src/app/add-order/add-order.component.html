@@ -1,0 +1,189 @@
+<div class="login_page d-flex align-items-center flex-column">
+  <h1>Add Order</h1>
+  <form class="col-12 col-md-8 col-lg-6 mb-5" [formGroup]="orderForm">
+    <div class="mb-3">
+      <label>Order Date</label>
+      <input
+        type="date"
+        class="form-control"
+        formControlName="order_date"
+        [class.is-invalid]="
+          orderForm.get('order_date')?.invalid &&
+          orderForm.get('order_date')?.touched
+        "
+      />
+    </div>
+
+    <div class="mb-3">
+      <label>Company</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="company"
+        [class.is-invalid]="
+          orderForm.get('company')?.invalid && orderForm.get('company')?.touched
+        "
+      />
+    </div>
+
+    <div class="mb-3">
+      <label>Owner</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="owner"
+        [class.is-invalid]="
+          orderForm.get('owner')?.invalid && orderForm.get('owner')?.touched
+        "
+      />
+    </div>
+
+    <div class="mb-3">
+      <label>Item</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="item"
+        [class.is-invalid]="
+          orderForm.get('item')?.invalid && orderForm.get('item')?.touched
+        "
+      />
+    </div>
+
+    <div class="mb-3">
+      <label>Quantity</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="quantity"
+        [class.is-invalid]="
+          orderForm.get('quantity')?.invalid &&
+          orderForm.get('quantity')?.touched
+        "
+      />
+    </div>
+
+    <div class="mb-3">
+      <label>Weight ( in KG )</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="weight"
+        [class.is-invalid]="
+          orderForm.get('weight')?.invalid && orderForm.get('weight')?.touched
+        "
+      />
+    </div>
+
+    <div class="mb-3">
+      <label>Request for shipment</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="req_for_shipment"
+        [class.is-invalid]="
+          orderForm.get('req_for_shipment')?.invalid &&
+          orderForm.get('req_for_shipment')?.touched
+        "
+      />
+    </div>
+
+    <div class="mb-3">
+      <label>Tracking id</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="tracking_id"
+        [class.is-invalid]="
+          orderForm.get('tracking_id')?.invalid &&
+          orderForm.get('tracking_id')?.touched
+        "
+      />
+    </div>
+
+    <div class="mb-3" formGroupName="shipment_size">
+      <label>Shipment size ( in inches )</label>
+      <div class="d-flex gap-3">
+        <input
+          type="text"
+          class="form-control"
+          formControlName="length"
+          placeholder="Length"
+          [class.is-invalid]="
+            orderForm.get('shipment_size.length')?.invalid &&
+            orderForm.get('shipment_size.length')?.touched
+          "
+        />
+        <input
+          type="text"
+          class="form-control"
+          formControlName="breadth"
+          placeholder="Breadth"
+          [class.is-invalid]="
+            orderForm.get('shipment_size.breadth')?.invalid &&
+            orderForm.get('shipment_size.breadth')?.touched
+          "
+        />
+        <input
+          type="text"
+          class="form-control"
+          formControlName="height"
+          placeholder="Height"
+          [class.is-invalid]="
+            orderForm.get('shipment_size.height')?.invalid &&
+            orderForm.get('shipment_size.height')?.touched
+          "
+        />
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label>Box count</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="box_count"
+        [class.is-invalid]="
+          orderForm.get('box_count')?.invalid &&
+          orderForm.get('box_count')?.touched
+        "
+      />
+    </div>
+
+    <div class="mb-3">
+      <label>Specification</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="specification"
+        [class.is-invalid]="
+          orderForm.get('specification')?.invalid &&
+          orderForm.get('specification')?.touched
+        "
+      />
+    </div>
+
+    <div class="mb-4">
+      <label>Checklist quantity</label>
+      <input
+        type="text"
+        class="form-control"
+        formControlName="checklist_quantity"
+        [class.is-invalid]="
+          orderForm.get('checklist_quantity')?.invalid &&
+          orderForm.get('checklist_quantity')?.touched
+        "
+      />
+    </div>
+
+    <div class="mb-3">
+      <input
+        type="submit"
+        class="form-control"
+        value="Add Order"
+        [disabled]="orderForm.invalid"
+        (click)="addOrder(orderForm.value)"
+      />
+    </div>
+  </form>
+</div>

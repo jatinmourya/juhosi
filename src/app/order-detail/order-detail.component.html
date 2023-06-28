@@ -1,0 +1,51 @@
+<div class="order-details">
+  <!-- {{ userOrderDetails | json }} -->
+  <table class="table" *ngIf="userOrderDetails">
+    <thead>
+      <tr>
+        <th>item/customer</th>
+        <th>customer 1</th>
+        <th>customer 2</th>
+        <th>total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Quantity</td>
+        <td>
+          {{ customer1.sum_of_quantity ? customer1.sum_of_quantity : 0 }}
+        </td>
+        <td>
+          {{ customer2.sum_of_quantity ? customer2.sum_of_quantity : 0 }}
+        </td>
+        <td>
+          {{ customer1.sum_of_quantity + customer2.sum_of_quantity }}
+        </td>
+      </tr>
+      <tr>
+        <td>Weight</td>
+        <td>
+          {{ customer1.sum_of_weight ? customer1.sum_of_weight : 0 }}
+        </td>
+        <td>
+          {{ customer2.sum_of_weight ? customer2.sum_of_weight : 0 }}
+        </td>
+        <td>
+          {{ customer1.sum_of_weight + customer2.sum_of_weight | number }}
+        </td>
+      </tr>
+      <tr>
+        <td>Box Count</td>
+        <td>
+          {{ customer1.sum_of_box_count ? customer1.sum_of_box_count : 0 }}
+        </td>
+        <td>
+          {{ customer2.sum_of_box_count ? customer2.sum_of_box_count : 0 }}
+        </td>
+        <td>
+          {{ customer1.sum_of_box_count + customer2.sum_of_box_count }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

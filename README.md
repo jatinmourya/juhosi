@@ -1,5 +1,7 @@
 # JuhosiWebApp
 
+netlify link - https://juhosi.netlify.app/
+
 # step 1 : create db and tables in mysql
 
 ```

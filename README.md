@@ -1,6 +1,6 @@
 # JuhosiWebApp
 
-# create db in mysql
+# create db and tables in mysql
 create database juhosi;
 
 use juhosi;

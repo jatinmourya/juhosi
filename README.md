@@ -38,7 +38,12 @@ create TABLE auth (username varchar(50) primary key,password varchar(50));
  ```
 
 # step 2 : Backend 
-start nodejs backend server , go to backend/src/, run
+
+go to backend/src/
+
+create .env file containing db_passwd = (your db password) and dbName = juhosi
+
+start nodejs backend server, run
   
   ```
   npm install

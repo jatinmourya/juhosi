@@ -44,7 +44,7 @@ go to backend/src/
 
 create .env file containing db_passwd = (your db password) and dbName = juhosi
 
-start nodejs backend server, run
+install packages and start nodejs backend server, run
   
   ```
   npm install

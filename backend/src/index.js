@@ -7,10 +7,6 @@ db.connect(function (err) {
   else {
     console.log("Connected to database : " + process.env.dbName);
     db.query(`create database if not exists ` + process.env.dbName);
-    // db.query(`drop table  if exists ${process.env.tableName}`);
-    // db.query(
-    //   `create table if not exists ${process.env.tableName} (id int AUTO_INCREMENT PRIMARY KEY ,full_name varchar(100),email varchar(100),username varchar(100),password varchar(100), course_selected varchar(100))`
-    // );
   }
 });
 
@@ -32,6 +28,6 @@ app.get("*", (req, res) => {
   res.send("oops , page not found ");
 });
 
-app.listen(process.env.port, () => {
-  console.log(`Server live at http://localhost:${process.env.port}`);
+app.listen(9123, () => {
+  console.log(`Server live at http://localhost:${9123}`);
 });

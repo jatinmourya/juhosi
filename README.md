@@ -1,5 +1,6 @@
 # JuhosiWebApp
 
+if you don't want to start angular application on local, you can go to this site (frontend)
 netlify link - https://juhosi.netlify.app/
 
 # step 1 : create db and tables in mysql
@@ -51,6 +52,8 @@ start nodejs backend server, run
   ```
 
 # step 3 : before starting Angular App, run
+
+go to root directory (' / ')
 
 ```
 npm install

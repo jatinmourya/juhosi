@@ -1,6 +1,7 @@
 # JuhosiWebApp
 
 # create db and tables in mysql
+```
 create database juhosi;
 
 use juhosi;
@@ -21,7 +22,7 @@ create TABLE auth (username varchar(50) primary key,password varchar(50));
      order_date DATE,
      company VARCHAR(100),
      owner VARCHAR(100),
-    item VARCHAR(100),
+     item VARCHAR(100),
      quantity INT,
      weight DECIMAL(8, 2),
      req_for_shipment VARCHAR(100),
@@ -31,7 +32,7 @@ create TABLE auth (username varchar(50) primary key,password varchar(50));
      specification VARCHAR(100),
      checklist_quantity VARCHAR(100)
 ); 
- 
+ ```
 # for Backend 
 - step 1 start nodejs backend server , go to backend/src/ run ' node index.js '
 # before starting Angular App

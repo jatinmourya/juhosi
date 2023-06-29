@@ -1,6 +1,7 @@
 # JuhosiWebApp
 
-# create db and tables in mysql
+# step 1 : create db and tables in mysql
+
 ```
 create database juhosi;
 
@@ -33,9 +34,23 @@ create TABLE auth (username varchar(50) primary key,password varchar(50));
      checklist_quantity VARCHAR(100)
 ); 
  ```
-# for Backend 
-- step 1 start nodejs backend server , go to backend/src/ run ' node index.js '
-# before starting Angular App
-- run ' npm install ' 
-# start Angular App
-- run ' ng s '
+
+# step 2 : Backend 
+start nodejs backend server , go to backend/src/, run
+  
+  ```
+  npm install
+  node index.js
+  ```
+
+# step 3 : before starting Angular App, run
+
+```
+npm install
+```
+
+# step 4 : start Angular App, run
+```
+ng s
+````
+

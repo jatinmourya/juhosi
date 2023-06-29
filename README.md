@@ -1,27 +1,58 @@
 # JuhosiWebApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.0.4.
+netlify link - https://juhosi.netlify.app/
 
-## Development server
+# step 1 : create db and tables in mysql
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```
+create database juhosi;
 
-## Code scaffolding
+use juhosi;
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+create TABLE auth (username varchar(50) primary key,password varchar(50));
+ INSERT into auth values('admin','admin');
+ INSERT into auth values('customer1','customer1');
+ INSERT into auth values('customer2','customer2');
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+  CREATE TABLE order_list (
+     username VARCHAR(100),
+     FOREIGN KEY (username)
+         REFERENCES auth (username),
+     order_date DATE,
+     company VARCHAR(100),
+     owner VARCHAR(100),
+     item VARCHAR(100),
+     quantity INT,
+     weight DECIMAL(8, 2),
+     req_for_shipment VARCHAR(100),
+     tracking_id VARCHAR(100),
+     shipment_size VARCHAR(100),
+     box_count INT,
+     specification VARCHAR(100),
+     checklist_quantity VARCHAR(100)
+); 
+ ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# step 2 : Backend 
+start nodejs backend server , go to backend/src/, run
+  
+  ```
+  npm install
+  node index.js
+  ```
 
-## Further help
+# step 3 : before starting Angular App, run
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+npm install
+```
+
+# step 4 : start Angular App, run
+```
+ng s
+````
+

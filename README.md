@@ -42,7 +42,7 @@ create TABLE auth (username varchar(50) primary key,password varchar(50));
 
 go to backend/src/
 
-create .env file containing db_passwd = (your db password) and dbName = juhosi, like
+create ' .env file ' containing db_passwd = (your db password) and dbName = juhosi, file looks like this
 
 ```
 db_passwd='password'
@@ -50,14 +50,14 @@ dbName=juhosi
 ```
 
 
-install packages and start nodejs backend server, run
+install packages and start nodejs backend server, run in terminal
   
   ```
   npm install
   node index.js
   ```
 
-# step 3 : before starting Angular App, run
+# step 3 : before starting Angular App, run in terminal
 
 go to root directory (' / ')
 
@@ -65,7 +65,7 @@ go to root directory (' / ')
 npm install
 ```
 
-# step 4 : start Angular App, run
+# step 4 : start Angular App, run in terminal
 ```
 ng s
 ````

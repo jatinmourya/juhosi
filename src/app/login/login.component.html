@@ -30,10 +30,7 @@
         type="submit"
         class="form-control"
         value="Sign In"
-        [disabled]="
-          loginForm.get('username')?.invalid ||
-          loginForm.get('password')?.invalid
-        "
+        [disabled]="loginForm.invalid"
         (click)="submitLoginForm(loginForm.value)"
       />
     </div>

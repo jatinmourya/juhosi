@@ -1,5 +1,6 @@
 # JuhosiWebApp
 
+if you don't want to start angular application on local, you can go to this site (frontend)
 netlify link - https://juhosi.netlify.app/
 
 # step 1 : create db and tables in mysql
@@ -38,20 +39,33 @@ create TABLE auth (username varchar(50) primary key,password varchar(50));
  ```
 
 # step 2 : Backend 
-start nodejs backend server , go to backend/src/, run
+
+go to backend/src/
+
+create ' .env file ' containing db_passwd = (your db password) and dbName = juhosi, file looks like this
+
+```
+db_passwd='password'
+dbName=juhosi
+```
+
+
+install packages and start nodejs backend server, run in terminal
   
   ```
   npm install
   node index.js
   ```
 
-# step 3 : before starting Angular App, run
+# step 3 : before starting Angular App, run in terminal
+
+go to root directory (' / ')
 
 ```
 npm install
 ```
 
-# step 4 : start Angular App, run
+# step 4 : start Angular App, run in terminal
 ```
 ng s
 ````
